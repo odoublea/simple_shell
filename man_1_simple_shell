@@ -116,4 +116,4 @@ chdir (2), close (2), execve (2), exit (3), fflush (3), fork (2), free (3), getc
 Not yet.
 
 .SH AUTHOR
-Written by Samuel Ifada and Israel Adenuga.
+Written by Abdulqudus Oladega and Samuel Anozie
