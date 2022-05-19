@@ -44,28 +44,28 @@ Upon invocation, absash receives and copies the environment of the parent proces
 The home directory of the current user and the default directory argument for the cd builtin command.
 
 $ echo "echo $HOME" | ./absash
-/home/vagrant
+/home/ubuntu
 
 ## PWD
 
 The current working directory as set by the cd command.
 
 $ echo "echo $PWD" | ./absash
-/home/vagrant/holberton/simple_shell
+/home/ubuntu/alx/simple_shell
 
 ## OLDPWD
 
 The previous working directory as set by the cd command.
 
 $ echo "echo $OLDPWD" | ./absash
-/home/vagrant/holberton/bog-062019-test_suite
+/home/ubuntu/alx/bog-062019-test_suite
 
 ## PATH
 
 A colon-separated list of directories in which the shell looks for commands. A null directory name in the path (represented by any of two adjacent colons, an initial colon, or a trailing colon) indicates the current directory.
 
 $ echo "echo $PATH" | ./absash
-/home/vagrant/.cargo/bin:/home/vagrant/.local/bin:/home/vagrant/.rbenv/plugins/ruby-build/bin:/home/vagrant/.rbenv/shims:/home/vagrant/.rbenv/bin:/home/vagrant/.nvm/versions/node/v10.15.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/vagrant/.cargo/bin:/home/vagrant/workflow:/home/vagrant/.local/bin
+/home/ubuntu/.cargo/bin:/home/ubuntu/.local/bin:/home/ubuntu/.rbenv/plugins/ruby-build/bin:/home/ubuntu/.rbenv/shims:/home/ubuntu/.rbenv/bin:/home/ubuntu/.nvm/versions/node/v10.15.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/.cargo/bin:/home/ubuntu/workflow:/home/ubuntu/.local/bin
 
 ## Command Execution
 
@@ -102,7 +102,7 @@ ENV_VARIABLE is substituted with its value.
 Example:
 
 $ echo "echo $PWD" | ./absash
-/home/vagrant/holberton/simple_shell
+/home/ubuntu/alx/simple_shell
 
 ## $?
 
@@ -143,11 +143,11 @@ command1 && command2: command2 is executed if, and only if, command1 returns an 
 
 Example:
 
-$ echo "error! && echo 'holberton'" | ./absash
+$ echo "error! && echo 'alx'" | ./absash
 ./shellby: 1: error!: not found
-$ echo "echo 'my name is' && echo 'holberton'" | ./absash
+$ echo "echo 'my name is' && echo 'alx'" | ./absash
 'my name is'
-'holberton'
+'alx'
 ## || - OR logical operator
 command1 || command2: command2 is executed if, and only if, command1 returns a non-zero exit status.
 
@@ -170,13 +170,13 @@ Example:
 
 $ ./absash
 ^-^ pwd
-/home/vagrant/holberton/simple_shell
+/home/ubuntu/alx/simple_shell
 $ cd ../
 ^-^ pwd
-/home/vagrant/holberton
+/home/ubuntu/alx
 ^-^ cd -
 ^-^ pwd
-/home/vagrant/holberton/simple_shell
+/home/ubuntu/alx/simple_shell
 ## exit
 Usage: exit [STATUS]
 Exits the shell.
@@ -193,7 +193,7 @@ Example:
 
 $ ./absash
 $ env
-NVM_DIR=/home/vagrant/.nvm
+NVM_DIR=/home/ubuntu/.nvm
 ...
 ## setenv
 Usage: setenv [VARIABLE] [VALUE]
@@ -202,7 +202,7 @@ Upon failure, prints a message to stderr.
 Example:
 
 $ ./absash
-$ setenv NAME Alx
+$ setenv NAME ALX
 $ echo $NAME
 Alx
 ## unsetenv
@@ -212,7 +212,7 @@ Upon failure, prints a message to stderr.
 Example:
 
 $ ./absash
-$ setenv NAME Holberton
+$ setenv NAME ALX
 $ unsetenv NAME
 $ echo $NAME
 
